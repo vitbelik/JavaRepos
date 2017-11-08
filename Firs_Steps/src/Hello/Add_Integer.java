@@ -1,10 +1,7 @@
 package Hello;
 
-
-
 class add_val{
 	int[] where;
-	
 	add_val(int[] k){
 		where = k;
 	}
@@ -12,11 +9,7 @@ class add_val{
 
 class add{
 	int val;
-	
 	add_val add_info(int val){
-		
-		
-		
 	}
 }
 
@@ -28,6 +21,5 @@ public class Add_Integer{
 		
 		a = pi.add_info(di);
 		System.out.print(a);
-		
 	}
 }
