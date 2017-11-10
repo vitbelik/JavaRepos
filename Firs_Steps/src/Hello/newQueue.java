@@ -1,6 +1,7 @@
 package Hello;
 
-class Queue{
+class Queue1 {
+	
 	private char q[]; //this array holds the queue
 	private int putloc, getloc; // the put and get indices
 		
@@ -72,7 +73,7 @@ class newQueue {
 		
 		System.out.println("\n");
 		
-		System.out.println("Content of q3: ");
+		System.out.println("Content of the q3: ");
 		for (i = 0; i < 10; i++) {
 			ch = q3.get();
 			System.out.print(ch);

@@ -20,7 +20,7 @@ public class SumDemo {
 		Summation s1 = new Summation(5);
 		Summation s2 = new Summation(s1);
 		
-		System.out.println("Summation " + s1.sum);
+		System.out.println("Summation s1 " + s1.sum);
 		System.out.println("Summation s2 " + s2.sum);
 		
 	}
