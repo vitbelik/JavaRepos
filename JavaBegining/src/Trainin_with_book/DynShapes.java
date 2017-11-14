@@ -107,16 +107,32 @@ class Rectangle extends TwoDShape12 {
 	}
 }
 
+class Circle extends TwoDShape12 {
+	
+	Circle() {
+		super();
+	}
+	
+	Circle (double x, String n) {
+		super(x, n);
+	}
+	
+	double area() {
+		return 0.5 * getWidth() * 2 * 3.14;
+	}
+}
+
 
 public class DynShapes {
 	public static void main (String args[]) {
-		TwoDShape12 shapes[] = new TwoDShape12[5];
+		TwoDShape12 shapes[] = new TwoDShape12[6];
 		
 		shapes[0] = new Triangle12(8.0, 12.0, "outlined");
 		shapes[1] = new Rectangle(10);
 		shapes[2] = new Rectangle(10, 4);
 		shapes[3] = new Triangle12(7.0);
 		shapes[4] = new TwoDShape12(10, 20, "generic");
+		shapes[5] = new Circle(5, "circle");
 		
 		for (int i = 0; i < shapes.length; i++) {
 			System.out.println("object is " + shapes[i].getName());
