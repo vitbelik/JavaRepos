@@ -3,7 +3,7 @@ package Trainin_with_book;
 class ErrorMsg {
 	final int OUTER 	= 0;
 	final int INNER 	= 1;
-	final int DISKKER 	= 2;
+	final static int DISKKER 	= 2;
 	final int INDEXERR 	= 3;
 	
 	String msg[] = {
