@@ -5,12 +5,12 @@ class Queue1 {
 	private char q[]; //this array holds the queue
 	private int putloc, getloc; // the put and get indices
 		
-	Queue (int size){
+	Queue1 (int size){
 		q = new char[size]; //allocate memory for queue
 		putloc = getloc = 0;
 	}
 	
-	Queue(Queue ob){
+	Queue1(Queue1 ob){
 		putloc = ob.putloc;
 		getloc = ob.getloc;
 		q = new char[ob.q.length];
@@ -20,7 +20,7 @@ class Queue1 {
 			q[i] = ob.q[i];
 	}
 	
-	Queue(char a[]){
+	Queue1(char a[]){
 		putloc = 0;
 		getloc = 0;
 		q = new char[a.length];
@@ -49,10 +49,10 @@ class Queue1 {
 class newQueue {
 	public static void main (String args[]) {
 		
-		Queue q1 = new Queue(10);
+		Queue1 q1 = new Queue1(10);
 		
 		char name[] = {'T', 'o', 'm'};
-		Queue q2 = new Queue(name);
+		Queue1 q2 = new Queue1(name);
 		
 		char ch;
 		int i;
@@ -62,7 +62,7 @@ class newQueue {
 			q1.put((char) ('A' + i));
 			
 		//construct queue from another queue
-		Queue q3 = new Queue(q2);
+		Queue1 q3 = new Queue1(q2);
 		
 		//Show the queues
 		System.out.println("Content of the q1 ");
