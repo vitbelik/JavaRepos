@@ -6,7 +6,7 @@ public class FileOpen {
 	public static void main (String args[]) 
 	throws IOException {
 		int i;
-		FileInputStream fin = null;
+		//FileInputStream fin = null;
 		
 		//1. we should open a file
 		//2. read each line from file
@@ -18,8 +18,8 @@ public class FileOpen {
 			return;
 		}
 		
-		try {
-			fin = new FileInputStream(args[0]);
+		try (FileInputStream fin = new FileInputStream(args[0])) {
+			//fin = new FileInputStream(args[0]);
 			//System.out.println(args[1]);
 			do {
 				i = fin.read();
@@ -30,12 +30,12 @@ public class FileOpen {
 		} catch (IOException exc) {
 			System.out.println("Error occured");
 		}
-		finally {
+		/*finally {
 			try {
 				if (fin != null) fin.close();
 			} catch (IOException exc) {
 				System.out.println("Error closing file");
 			}
-		}
+		}*/
 	}
 }
