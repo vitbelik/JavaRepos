@@ -6,7 +6,7 @@ public class QueuFullException extends Exception{
 	QueuFullException(int s) { size = s; }
 		
 	public String toString() {
-		return "\nQueue is full. Maximum size is " + size;
+		return " - ERROR. Queue is full. Maximum size is " + size;
 		
 	}
 }
