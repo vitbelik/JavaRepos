@@ -3,7 +3,7 @@ package Enumeration;
 enum Transportp {
 	CAR, AIRPLANE, TRUCK, TRAIN
 }
-
+	
 public class EnumDemo2 {
 	public static void main(String args[]) {
 		Transportp tp;
