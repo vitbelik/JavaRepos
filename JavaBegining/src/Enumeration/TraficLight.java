@@ -1,7 +1,15 @@
 package Enumeration;
 
 enum LightsColour {
-	RED, YELLOW, GREEN
+	RED(12000), YELLOW(2000), GREEN(10000);
+	
+	private int duration;
+	
+	LightsColour(int i) {
+		duration = i;
+	}
+	
+	int getDelay() { return duration; }
 }
 
 class TraficLightsSimulator implements Runnable{
@@ -26,7 +34,7 @@ class TraficLightsSimulator implements Runnable{
 	
 	public void run() {
 		while(!stop) {
-			try {
+			/*try {
 				switch(tlc) {
 				case GREEN:
 					Thread.sleep(10000); // green for 10 seconds
@@ -40,7 +48,15 @@ class TraficLightsSimulator implements Runnable{
 				}
 			} catch (InterruptedException exc) {
 				System.out.println(exc);
+			}*/
+			try {
+				for (LightsColour lt : LightsColour.values()) {
+					if (tlc==lt) Thread.sleep(lt.getDelay());
+				} 
+			}catch (InterruptedException e) {
+				System.out.println("OOops");
 			}
+			
 			changeColour();
 		}
 	}
