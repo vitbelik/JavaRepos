@@ -50,9 +50,7 @@ class TraficLightsSimulator implements Runnable{
 				System.out.println(exc);
 			}*/
 			try {
-				for (LightsColour lt : LightsColour.values()) {
-					if (tlc==lt) Thread.sleep(lt.getDelay());
-				} 
+				Thread.sleep(tlc.getDelay());
 			}catch (InterruptedException e) {
 				System.out.println("OOops");
 			}
